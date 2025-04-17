@@ -13,3 +13,4 @@
 /Users/saijagannadh/RiderProjects/MovieShopApp/Infrastructure/obj/Debug/net9.0/refint/Infrastructure.dll
 /Users/saijagannadh/RiderProjects/MovieShopApp/Infrastructure/obj/Debug/net9.0/Infrastructure.pdb
 /Users/saijagannadh/RiderProjects/MovieShopApp/Infrastructure/obj/Debug/net9.0/ref/Infrastructure.dll
+/Users/saijagannadh/RiderProjects/MovieShopApp/Infrastructure/obj/Debug/net9.0/Infrastructure.sourcelink.json

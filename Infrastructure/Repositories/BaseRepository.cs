@@ -8,7 +8,7 @@ namespace Infrastructure.Repositories;
 public class BaseRepository<T>:IRepository<T> where T :class
 {
     protected readonly MovieShopDbContext _dbcontext;
-    //connectio with db
+    //connection with db
     public BaseRepository(MovieShopDbContext dbContext)
     {
         _dbcontext = dbContext;

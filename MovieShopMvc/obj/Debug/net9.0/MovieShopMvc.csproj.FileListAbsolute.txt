@@ -341,3 +341,4 @@
 /Users/saijagannadh/RiderProjects/MovieShopApp/MovieShopMvc/obj/Debug/net9.0/ref/MovieShopMvc.dll
 /Users/saijagannadh/RiderProjects/MovieShopApp/MovieShopMvc/bin/Debug/net9.0/System.Formats.Asn1.dll
 /Users/saijagannadh/RiderProjects/MovieShopApp/MovieShopMvc/bin/Debug/net9.0/System.Text.Json.dll
+/Users/saijagannadh/RiderProjects/MovieShopApp/MovieShopMvc/obj/Debug/net9.0/MovieShopMvc.sourcelink.json

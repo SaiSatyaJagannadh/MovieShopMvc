@@ -19,12 +19,14 @@ public class MovieRepository:BaseRepository<Movie>,IMovieRepository
         var movies=_dbcontext.Movies.OrderByDescending(m=>m.Revenue).Take(100);
         return movies;
     }
+   
+
     
-    public async Task<IEnumerable<Movie>> GetMoviesByGenre(int genreId)
+    public async Task<IEnumerable<Movie>> GetMoviesByGenreId(int genreId)
     {
-        var movies = await _dbcontext.Movies.Include(m => m.Genres)
-            .Where(g => g.Id == genreId).ToListAsync();
-        return movies;
+        return await _dbcontext.Movies.Include(m => m.Genres)
+            .Where(m => m.Genres.Any(mg => mg.Id == genreId))
+            .ToListAsync();
     }
 
 
@@ -36,6 +38,11 @@ public class MovieRepository:BaseRepository<Movie>,IMovieRepository
             .Include(m => m.Genres)
             .FirstOrDefaultAsync(m => m.Id == id);
     }
+    
 
+    public virtual async Task<IEnumerable<Genre>> ListAllAsync()
+    {
+        return await _dbcontext.Set<Genre>().ToListAsync();
+    }
     
 }

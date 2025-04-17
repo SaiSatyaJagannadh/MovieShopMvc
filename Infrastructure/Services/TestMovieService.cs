@@ -55,7 +55,7 @@ public class TestMovieService:IMovieService
         throw new NotImplementedException();
     }
 
-    public Task<IEnumerable<MovieCardModel>> GetMoviesByGenre(int genreId)
+    public Task<IEnumerable<MovieDetailsModel>> GetMoviesByGenre(int genreId)
     {
         throw new NotImplementedException();
     }

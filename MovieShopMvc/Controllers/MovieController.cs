@@ -55,6 +55,13 @@ namespace MovieShopMvc.Controllers
             var movieDetails = await _movieService.GetMovieById(id); // ✅ now it's MovieDetailsModel
             return View(movieDetails);
         }
+
+        public ActionResult GenreMovie(int id)
+        {
+            var movie = _movieService.GetMoviesByGenre(id);
+            return View(movie);
+        }
         
+       
     }
 }

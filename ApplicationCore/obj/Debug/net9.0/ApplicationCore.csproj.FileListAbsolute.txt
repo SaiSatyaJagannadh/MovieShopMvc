@@ -9,3 +9,4 @@
 /Users/saijagannadh/RiderProjects/MovieShopApp/ApplicationCore/obj/Debug/net9.0/refint/ApplicationCore.dll
 /Users/saijagannadh/RiderProjects/MovieShopApp/ApplicationCore/obj/Debug/net9.0/ApplicationCore.pdb
 /Users/saijagannadh/RiderProjects/MovieShopApp/ApplicationCore/obj/Debug/net9.0/ref/ApplicationCore.dll
+/Users/saijagannadh/RiderProjects/MovieShopApp/ApplicationCore/obj/Debug/net9.0/ApplicationCore.sourcelink.json

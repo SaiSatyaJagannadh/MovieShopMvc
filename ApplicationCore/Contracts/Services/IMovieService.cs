@@ -11,7 +11,7 @@ public interface IMovieService
     
     MovieDetailsModel DeleteMovie(int id);
 
-    Task<IEnumerable<MovieCardModel>> GetMoviesByGenre(int genreId);
+    Task<IEnumerable<MovieDetailsModel>> GetMoviesByGenre(int genreId);
     
     Task<MovieDetailsModel> GetMovieById(int id);
 

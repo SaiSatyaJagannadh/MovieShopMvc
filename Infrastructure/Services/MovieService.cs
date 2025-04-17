@@ -115,23 +115,42 @@ public class MovieService: IMovieService
         return m;
     }
 
-    public async Task<IEnumerable<MovieCardModel>> GetMoviesByGenre(int genreId)
+    
+
+    // public async Task<IEnumerable<MovieDetailsModel>> GetMoviesByGenre(int genreId)
+    // {
+    //     var movies = await _movieRepository.GetMoviesByGenreId(genreId);
+    //     if (!movies.Any())
+    //         throw new Exception("No Movies Found");
+    //     var response = new List<MovieDetailsModel>();
+    //     foreach (var movie in movies)
+    //     {
+    //         response.Add(new MovieDetailsModel()
+    //         {
+    //             Id = movie.Id,
+    //             Title = movie.Title,
+    //             PosterURL = movie.PosterUrl,
+    //             Revenue = movie.Revenue
+    //         });
+    //     }
+    //     return response;
+    // }
+
+    
+    public async Task<IEnumerable<MovieDetailsModel>> GetMoviesByGenre(int genreId)
     {
-        var movies = await _movieRepository.GetMoviesByGenre(genreId);
+        var movies = await _movieRepository.GetMoviesByGenreId(genreId);
+
         if (!movies.Any())
             throw new Exception("No Movies Found");
-        var response = new List<MovieCardModel>();
-        foreach (var movie in movies)
+
+        return movies.Select(movie => new MovieDetailsModel
         {
-            response.Add(new MovieCardModel()
-            {
-                Id = movie.Id,
-                Title = movie.Title,
-                PosterURL = movie.PosterUrl,
-                Revenue = movie.Revenue
-            });
-        }
-        return response;
+            Id = movie.Id,
+            Title = movie.Title,
+            PosterURL = movie.PosterUrl,
+            Revenue = movie.Revenue
+        }).ToList();
     }
 
     public async Task<MovieDetailsModel> GetMovieById(int id)

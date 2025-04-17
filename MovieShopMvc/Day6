@@ -1,0 +1,30 @@
+04/17/2025
+
+Web API
+
+AddControllers
+AddControllersWithViews
+
+1. client-->server 
+http request message 
+
+2. Server--> client
+http response message 
+
+Http request cycle 
+stateless protocol --> never stores the requests 
+
+methods-->get=select,post=insert,put=update,delete, patch=partial update
+
+status code=1XX,2XX,3XX,4XX,5XX
+
+client sends a request, querystring, formbody
+http://localhost:50005/Employee/Edit?id=6 here ?id=6 is querystring
+http://localhost:50005/Employee/Create formbody-->create 
+
+http://localhost:33333/api/controller-webapi
+
+Middlewares
+Authentication
+Authorization
+Routing
