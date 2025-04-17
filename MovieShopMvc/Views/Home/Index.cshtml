@@ -1,0 +1,55 @@
+﻿@using ApplicationCore.Entities
+@using ApplicationCore.Models
+@* @{ *@
+@*     ViewData["Title"] = "Home Page"; *@
+@* } *@
+@* *@
+@* <div class="text-center"> *@
+@*     <h1 class="display-4">Welcome</h1> *@
+@*     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> *@
+@* </div> *@
+
+
+@* @if (2 != 2) *@
+@* { *@
+@*     <div> *@
+@*         Inside C# Razor View block *@
+@*     </div> *@
+@* } *@
+@* else *@
+@* { *@
+@*     <div> *@
+@*         Inside C# Razor View else blocksss *@
+@*     </div> *@
+@* } *@
+
+@* we used this IEnumerable to display the moviecardmodel data *@
+@model IEnumerable<MovieCardModel>
+
+@* <h1>@ViewData["Title"]</h1> *@
+@* <h1>Your age is @ViewBag.Age</h1> *@
+
+@* this code data will be getting from shared moviecard.cshtml *@
+
+@* <div class="rounded"> *@
+@*     <div class="container-fluid"> *@
+@*         <div class="row"> *@
+@*         @foreach (var m in Model) *@
+@*         { *@
+@*             <partial name="_MovieCard" model="m"/> *@
+@* *@
+@*         } *@
+@*         </div> *@
+@*     </div> *@
+@* </div> *@
+
+
+<div class="container-fluid mt-4">
+    <div class="row g-4">
+        @foreach (var m in Model)
+        {
+            <partial name="_MovieCard" model="m" />
+        }
+    </div>
+</div>
+

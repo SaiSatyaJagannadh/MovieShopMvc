@@ -1,0 +1,22 @@
+@* @model ApplicationCore.Models.MovieCardModel *@
+@* *@
+@* <div class="col-xl-2 col-lg-3 col-md-3 col-6 mb-4"> *@
+@* $1$if we click the image we will get to display the data for that we use tags#1# *@
+@* <a asp-controller="Movie" asp-action="MovieDetails" asp-route-id="@Model.Id"> *@
+@*     <img src="@Model.PosterURL" alt="@Model.Title"/> *@
+@* </a> *@
+@* </div> *@
+
+@model ApplicationCore.Models.MovieCardModel
+
+<div class="col-xl-2 col-lg-3 col-md-3 col-6 mb-4 d-flex justify-content-center">
+    <a asp-controller="Movie" asp-action="Details" asp-route-id="@Model.Id">
+        <img src="@Model.PosterURL" alt="@Model.Title" class="img-fluid rounded shadow-sm" style="height: 280px; object-fit: cover;" />
+    </a>
+</div>
+
+@* <div class="card mb-4 shadow bg-light"> *@
+@*     <a asp-controller="Movie" asp-action="Details" asp-route-id="@Model.Id"> *@
+@*         <img src="@Model.PosterURL" alt="@Model.Title" class="img-fluid" /> *@
+@*     </a> *@
+@* </div> *@

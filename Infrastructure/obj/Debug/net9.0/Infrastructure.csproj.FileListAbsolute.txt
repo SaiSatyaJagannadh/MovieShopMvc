@@ -1,0 +1,15 @@
+/Users/saijagannadh/RiderProjects/MovieShopApp/Infrastructure/bin/Debug/net9.0/Infrastructure.deps.json
+/Users/saijagannadh/RiderProjects/MovieShopApp/Infrastructure/bin/Debug/net9.0/Infrastructure.dll
+/Users/saijagannadh/RiderProjects/MovieShopApp/Infrastructure/bin/Debug/net9.0/Infrastructure.pdb
+/Users/saijagannadh/RiderProjects/MovieShopApp/Infrastructure/bin/Debug/net9.0/ApplicationCore.dll
+/Users/saijagannadh/RiderProjects/MovieShopApp/Infrastructure/bin/Debug/net9.0/ApplicationCore.pdb
+/Users/saijagannadh/RiderProjects/MovieShopApp/Infrastructure/obj/Debug/net9.0/Infrastructure.csproj.AssemblyReference.cache
+/Users/saijagannadh/RiderProjects/MovieShopApp/Infrastructure/obj/Debug/net9.0/Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/saijagannadh/RiderProjects/MovieShopApp/Infrastructure/obj/Debug/net9.0/Infrastructure.AssemblyInfoInputs.cache
+/Users/saijagannadh/RiderProjects/MovieShopApp/Infrastructure/obj/Debug/net9.0/Infrastructure.AssemblyInfo.cs
+/Users/saijagannadh/RiderProjects/MovieShopApp/Infrastructure/obj/Debug/net9.0/Infrastructure.csproj.CoreCompileInputs.cache
+/Users/saijagannadh/RiderProjects/MovieShopApp/Infrastructure/obj/Debug/net9.0/Infrastr.15EFFBFE.Up2Date
+/Users/saijagannadh/RiderProjects/MovieShopApp/Infrastructure/obj/Debug/net9.0/Infrastructure.dll
+/Users/saijagannadh/RiderProjects/MovieShopApp/Infrastructure/obj/Debug/net9.0/refint/Infrastructure.dll
+/Users/saijagannadh/RiderProjects/MovieShopApp/Infrastructure/obj/Debug/net9.0/Infrastructure.pdb
+/Users/saijagannadh/RiderProjects/MovieShopApp/Infrastructure/obj/Debug/net9.0/ref/Infrastructure.dll

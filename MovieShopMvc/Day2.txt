@@ -1,0 +1,84 @@
+Http verbs/methods: GET, POST, PUT, DELETE
+
+GET: http://movieshop.com/topmovies
+POST: http://movieshop.com/account/register
+PUT:
+DELETE:
+
+MVC: model view Controller;architectural pattern
+Model->C# objects that represents some data ; will be used in the view
+View-> UI part of your application
+Controller--> C# class that inherits from the controller base class
+
+URL: http://movieshop.com/Home/topmovies
+
+Home--> Controller name 
+topmovies--> Action Method 
+
+public class HomeController: Controller
+{
+
+  [HttpGet]//define like this 
+  public IActionResult TopMovies()
+  {
+return View();
+  }
+}
+
+Conventional Routing:-- uses predined pattern 
+convention over configuration 
+
+view discovery-- used for controller
+
+
+
+cshtml: extension that represents C# html file. razor viee 
+razor view engine is going to convert cshtml into plain html ans is going to send it to the browser.
+
+
+N-layered Architecture 
+  1.UI Layer: View , Controller layer
+  2. Business Logic Code: 
+  3. Data Access Logic code:  go to sql db, get data, add data, update the data
+  4. Services: 
+  5.Caching 
+
+
+  DTO: data trabsfer object 
+
+repositories;
+
+  entity : database columns like below 
+  Movie entity: id, title, budget, casts, PosterRL
+  MovieCardModel: id, title, PosterURL
+
+tag helpers --asp-controller
+
+
+Strongly Typed data:
+Weakly Typed data:viewdata, viewbag--> always go with viewbag
+
+****Dependency Injection: is design pattern that makes our code loosely coupled so that its easier to test, scale our code.
+
+
+Different types of Injection--
+1.Constructor Injection**(we use more of this)
+2. Property Injection
+3. Methos Injection 
+
+in DI we always make it readonly
+
+Lifescope of DI:****
+  1. Transient:(services are created each time they are requested )
+  2. Scoped:Services are created once per http request.
+  3. Singelton: services(means instance) are created once and shared throughout the application.
+
+**readonly vs constant
+
+readonly -- in different methids we cant intiate to that one 
+
+for injection we need to use AddScope
+
+Focus on the DI( for further understanding)
+
+primary constructor-- when we pass it to the class level then we call it as primary constructor but here readonly property wont work

@@ -1,0 +1,123 @@
+@model ApplicationCore.Models.MovieDetailsModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Left: Poster + Movie Facts -->
+        <div class="col-md-4">
+            <img src="@Model.PosterURL" class="img-fluid rounded shadow-sm mb-3" alt="@Model.Title" />
+
+            <div class="card">
+                <div class="card-header fw-bold">MOVIE FACTS</div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <i class="fas fa-calendar-alt me-2"></i>
+                        Release Date:
+                        <span class="badge bg-secondary ms-2">
+                            @Model.ReleaseDate?.ToString("MMM dd, yyyy")
+                        </span>
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fas fa-clock me-2"></i>
+                        Run Time:
+                        <span class="badge bg-secondary ms-2">
+                            @(Model.RunTime.HasValue ? $"{Model.RunTime}m" : "N/A")
+                        </span>
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fas fa-dollar-sign me-2"></i>
+                        Box Office:
+                        <span class="badge bg-success ms-2">
+                            @Model.Revenue.ToString("C0")
+                        </span>
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fas fa-wallet me-2"></i>
+                        Budget:
+                        <span class="badge bg-warning text-dark ms-2">
+                            @Model.Budget.ToString("C0")
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card mt-3">
+                <div class="card-header fw-bold">TRAILERS</div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        @if (!string.IsNullOrEmpty(Model.TmdbUrl))
+                        {
+                            <i class="fas fa-video me-2"></i>
+                            <a href="@Model.TmdbUrl" target="_blank">@Model.Title</a>
+                        }
+                        else
+                        {
+                            <span class="text-muted">No trailer available.</span>
+                        }
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Right: Title, Info, Overview, Actions, Cast -->
+        <div class="col-md-8">
+            <h2 class="fw-bold">@Model.Title</h2>
+            <p class="text-muted fst-italic">@Model.Tagline</p>
+
+            <div class="d-flex align-items-center mb-2">
+                <span class="me-3">
+                    @(Model.RunTime.HasValue ? $"{Model.RunTime}m" : "N/A")
+                    | @Model.ReleaseDate?.Year
+                </span>
+
+                @if (Model.Genres != null)
+                {
+                    foreach (var genre in Model.Genres)
+                    {
+                        <span class="badge bg-dark me-1">@genre.Name</span>
+                    }
+                }
+
+                @* @if (Model.Rating.HasValue) *@
+                @* { *@
+                @*     <span class="badge bg-success ms-2">@Model.Rating.Value.ToString("0.0")</span> *@
+                @* } *@
+            </div>
+
+            <p class="text-dark">@Model.Overview ?? "No overview available."</p>
+
+            <div class="d-flex gap-3 mt-3">
+                <button class="btn btn-outline-dark"><i class="far fa-edit me-1"></i> REVIEW</button>
+                <a asp-controller="User" asp-action="BuyMovie" asp-route-id="@Model.Id" class="btn btn-dark">
+                    BUY @Model.Price?.ToString("C")
+                </a>
+            </div>
+
+            <!-- Cast Table -->
+            <h4 class="mt-5 fw-bold">CAST</h4>
+            @if (Model.Casts != null && Model.Casts.Any())
+            {
+                <table class="table align-middle">
+                    <tbody>
+                    @foreach (var cast in Model.Casts)
+                    {
+                        <tr>
+                            <td style="width: 50px;">
+                                <img src="@cast.ProfilePath" class="rounded-circle" width="40" height="40" alt="@cast.Name" />
+                            </td>
+                            <td>@cast.Name</td>
+                            <td class="text-muted">@cast.Character</td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <p class="text-muted">No cast information available.</p>
+            }
+        </div>
+    </div>
+</div>

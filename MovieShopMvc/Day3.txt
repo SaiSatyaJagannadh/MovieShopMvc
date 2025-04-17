@@ -1,0 +1,64 @@
+
+Dapper-- Micro ORM 
+ORM--
+
+Entity Framework--> Full fledged ORM and traditional ORM
+
+**EF  core does the mapping between C# objects and  database tables,
+generate a sql query and also migrate file for change tracking.
+
+Movies table: Id, title, revenue, budget 
+select top 30 id, title,revenue, budget from movies order  by revenue
+
+using linq 
+movies.OrderByDescending(m=>m.Revenue).Take(30)
+above will be converted into SQL by EF.
+
+
+Two Options with EF:
+1. Code-first approach:
+2. Database-first approach:
+
+Which one you choose b/w Entity core vs dapper ORM
+Entity Core-->if we want to create new project then Entity, using linq for querying.
+Dapper-->preexisting db and performing critical application then Dapper ORM(lightweight and faster)
+
+
+
+***Step by step approach for setting up the EF Core:
+1.Create an entity class in application core 
+2. Store Connection string to the Db in appsettings.json in program side file
+3. Install packages ( dotnet tool install --global dotnet-ef
+) same program.cs side 
+microsoft.EntityFrameworkcore.sqlserver
+microsoft.EntityFrameworkcore.design
+4.Dbcontext class--> Represents your database in infrastructure
+DbSet properties-->represents your tables
+
+5.set this up in the program.cs class
+ //inject connection string to DbContext class by reading connection string from appsettings.json into program.cs
+   builder.Services.AddDbContext<MovieShopDbContext>(options
+       =>
+   {
+       options.UseSqlServer(builder.Configuration.GetConnectionString("MovieShopDbConnection"));
+   });
+6. Add Dbset Properties in DbContext Class
+likt this     public DbSet<Movie> Movies { get; set; }
+
+7. Create a migration "dotnet ef migrations add InitialMigration -p ../Infrastructure/Infrastructure.csproj"
+
+
+8. Check the migration file in which file you created here it is infrastructure
+9. Apply changes to the database using: "dotnet ef database update"
+
+10. Model the database with rules using: Data annotations like entities or fluent API like dbcontext for composite keys and varchar type **
+
+----
+Assignemnt--
+look into lazy loading and eager loading in EF
+Include()
+changetracking()
+AsNoTracking()
+----
+
+

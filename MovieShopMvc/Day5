@@ -1,0 +1,50 @@
+
+Big cloud
+
+Azure Microsoft
+
+
+MoviShop App=> local Machine running on
+
+1. Domain name=> movieshop.com--> Godaddy, google domainn for deploying that
+2. Deploy your application code -> MVC to a server-->
+    a. windows Server 2019-->IIS
+    b.LInux Server -->ngix
+3. Build your own server
+
+
+IAAS(infrastructure as a Service)
+option1: Go to a cloud provider 
+buy virtual machines with either windows or linux 
+
+
+option2: Platform as a server (PAAS)
+Azure App Service-->Deploy your MVC application
+Azure SQL--> SQL db in cloub
+
+Azure functions(serverless functions)
+, blob storage(images, images), devops(development plus operations)
+, cognitive services(text analysis, Image recogn, sentiment )
+
+
+Software as a service (SAAS)
+office 365
+google docs
+Ms teams 
+Slack
+
+Devops 
+development and operation team combines is called Devops 
+
+Continous Integartion(CI)--> automatimg merging and testing code 
+Continous Delivery(CD)--> test and production environments 
+QA team-->will test functionality end to end 
+
+Future Branches--> will get the code from master/main branch
+Developers will add new code in this feature branch
+
+Github code --->
+Azure Devops Pipeline--> devops team + you will work closely with them
+CI/CD
+
+

@@ -1,0 +1,11 @@
+/Users/saijagannadh/RiderProjects/MovieShopApp/ApplicationCore/bin/Debug/net9.0/ApplicationCore.deps.json
+/Users/saijagannadh/RiderProjects/MovieShopApp/ApplicationCore/bin/Debug/net9.0/ApplicationCore.dll
+/Users/saijagannadh/RiderProjects/MovieShopApp/ApplicationCore/bin/Debug/net9.0/ApplicationCore.pdb
+/Users/saijagannadh/RiderProjects/MovieShopApp/ApplicationCore/obj/Debug/net9.0/ApplicationCore.GeneratedMSBuildEditorConfig.editorconfig
+/Users/saijagannadh/RiderProjects/MovieShopApp/ApplicationCore/obj/Debug/net9.0/ApplicationCore.AssemblyInfoInputs.cache
+/Users/saijagannadh/RiderProjects/MovieShopApp/ApplicationCore/obj/Debug/net9.0/ApplicationCore.AssemblyInfo.cs
+/Users/saijagannadh/RiderProjects/MovieShopApp/ApplicationCore/obj/Debug/net9.0/ApplicationCore.csproj.CoreCompileInputs.cache
+/Users/saijagannadh/RiderProjects/MovieShopApp/ApplicationCore/obj/Debug/net9.0/ApplicationCore.dll
+/Users/saijagannadh/RiderProjects/MovieShopApp/ApplicationCore/obj/Debug/net9.0/refint/ApplicationCore.dll
+/Users/saijagannadh/RiderProjects/MovieShopApp/ApplicationCore/obj/Debug/net9.0/ApplicationCore.pdb
+/Users/saijagannadh/RiderProjects/MovieShopApp/ApplicationCore/obj/Debug/net9.0/ref/ApplicationCore.dll

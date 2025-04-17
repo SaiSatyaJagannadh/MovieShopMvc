@@ -1,0 +1,51 @@
+04/14/2025
+
+
+dotnet ef migrations add CreatingMovieGenreJunctionTable -p ../Infrastructure/Infrastructure.csproj
+
+
+Partial Views 
+
+steps for creation 
+
+Coming to the views in mvc go to shared folder and create the default one for html view
+
+
+for setting up everything for the new web page after clicking
+http://localhost:5198/Movies/Details/Avatar
+
+1. Creating movie control model controller when clicking on images of the thing 
+-- click on scafffolding item --> MVC Controller Empty in the controller folder 
+2.create Model in Models of Application Core like for property defination "MovieDetailsModel.cs"
+3. In ImovieServices of app core or other Interface need to be created for deerving this in MovieService class of Infras
+ like this     "MovieDetailsModel GetMovieDetails(int id);"
+4. Implement the method in MovieService class of infrastr we added in IMovieServices interface.
+--- we implemented the code in Interfaced linked to MovieService because we are using it in the MovieController
+like this public MovieDetailsModel GetMovieDetails(int id)
+              {
+                  var movie = _movieRepository.GetById(id);
+                  var m = new MovieDetailsModel()
+                  {
+                      Id = movie.Id,
+                      Title = movie.Title,
+                      PosterURL = movie.PosterUrl,
+                      Budget = movie.Budget,
+                      Overview = movie.Overview,
+                      Revenue = movie.Revenue,
+                      Tagline = movie.Tagline,
+                  };
+                  return m;
+          
+              }
+5. After that we are going into http://localhost:5198/Movies/Details/Avatar details method in movie controller 
+public ActionResult MovieDetails(int id)
+        {
+            var movie = _movieService.GetMovieDetails(id);
+            return View(movie);
+        }
+6. Create the View for the Movies page -- create the folder under views of MVC and add --> Razor MVC View--> for html page 
+
+7. Need to check the html redirecting it to the after clicking the image to do that
+we already done this (Coming to the views in mvc go to shared folder and create the default one for html view)
+we need to setup above one with "asp-action="MovieDetails" of html page we created 
+
