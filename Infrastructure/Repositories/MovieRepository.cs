@@ -16,7 +16,7 @@ public class MovieRepository:BaseRepository<Movie>,IMovieRepository
 
     public IEnumerable<Movie> GetTop20GrossingMovies()
     {
-        var movies=_dbcontext.Movies.OrderByDescending(m=>m.Revenue).Take(100);
+        var movies=_dbcontext.Movies.OrderByDescending(m=>m.Revenue).Take(200);
         return movies;
     }
    
