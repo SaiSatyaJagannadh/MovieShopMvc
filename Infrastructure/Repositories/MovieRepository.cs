@@ -8,7 +8,7 @@ namespace Infrastructure.Repositories;
 
 public class MovieRepository:BaseRepository<Movie>,IMovieRepository
 {
-    //top200GrossingMovies it is implemented in IRepository
+    //top200GrossingMovies for display it is implemented in IRepository
     public MovieRepository(MovieShopDbContext dbContext) : base(dbContext)
     {
         
