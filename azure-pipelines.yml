@@ -7,8 +7,10 @@ trigger:
 - main
 
 pool:
-  vmImage: MovieAgent
-
+  name: Default
+  demands:
+    - Agent.Name -equals MovieAgent
+    
 variables:
   buildConfiguration: 'Release'
 
